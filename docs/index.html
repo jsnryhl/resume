@@ -3,329 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Jason R. Hall - Senior Cybersecurity Engineer</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-        }
-        header {
-            background-color: #0A1F44;
-            color: white;
+            color: #333;
+            background-color: #f8f9fa;
             padding: 20px;
-            text-align: center;
         }
-        header a {
-            color: white;
-            text-decoration: none;
-        }
+
         .container {
             max-width: 900px;
-            background-color: #fff;
-            margin: 20px auto;
-            padding: 20px 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
-        h1, h2, h3 {
-            color: #0A1F44;
-            background-color:#FFFFFF;
-        }
-        p, li {
-            font-size: 16px;
-        }
-        ul, ol {
-            margin-left: 20px;
-        }
-        footer {
-            background-color: #0A1F44;
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
-            text-align: center;
             padding: 20px;
+            text-align: left;
+        }
+
+        .header h1 {
+            font-size: 2.0em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .contact-info {
             margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .contact-info a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .section h3 {
+            color: #34495e;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .section h4 {
+            color: #2c3e50;
+            font-size: 1.0em;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .job {
+            margin-bottom: 10px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.0em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .company {
+            font-weight: 500;
+            color: #3498db;
+        }
+
+        .duration {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        .skill-category h4 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0px 10px;
+            color: #555;
+        }
+
+        .skill-list li:before {
+            content: "▸ ";
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 0px 0;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        ul li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+
+        .education-item, .training-item {
+            background: #f8f9fa;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .award-item {
+            background: #f8f9fa;
+            padding: 5px;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .job-header {
+                flex-direction: column;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>Jason R Hall</h1>
-    <h3>Cyber Security Engineer</h3>
-    <p><a href="https://linkedin.com/in/jasonrayhall">linkedin.com/in/jasonrayhall</a></p>
-</header>
-<div class="container">
-</br>
-<h1>INTRODUCTION</h1>
-<p>Throughout my Cybersecurity career, I have cultivated and honed a diverse range of skills, expertise, and accumulated experience in the field. My unwavering professional loyalty and dedication have been consistent throughout my tenure, and I continue to engage in ongoing learning, practice, and professional development to enhance my capabilities and contribute effectively to the industry.</p>
-<ul>
-	<li><p>Professional Development: Engages in ongoing learning, practice, and professional development.</p></li>
-	<li><p>Expertise: Cultivated and honed a diverse range of skills and expertise in Cybersecurity.</p></li>
-	<li><p>Professional Conduct: Demonstrates unwavering professional loyalty and dedication.</p></li>
-</ul>
+    <div class="container">
+        <header class="header">
+            <h1>JASON R. HALL</h1>
+            <div class="contact-info">
+                <a href="mailto:JSNRYHL@GMAIL.COM">JSNRYHL@GMAIL.COM</a> | 
+                304-900-6724 | 
+                <a href="#">LINKEDIN</a> | 
+                <a href="http://JHALL.ONLINE">JHALL.ONLINE</a> | 
+                LEWISBURG, WV
+            </div>
+        </header>
 
-<h1>SKILLS</h1>
-<h2>Cybersecurity Compliance</h2>
-<ul>
-	<li><p>NIST Risk Management Framework</p></li>
-	<li><p>NIST Cyber Security Framework</p></li>
-	<li><p>CIS Benchmarks</p></li>
-	<li><p>DISA STIG</p></li>
-	<li><p>SCAP</p></li>
-	<li><p>Compliance Assessment Automation</p></li>
-	<li><p>Vulnerability Assessment & Remediation</p></li>
-	<li><p>Vulnerability Monitoring</p></li>
-	<li><p>Enterprise Risk Management</p></li>
-	<li><p>Database (RDBMS; NoSQL)</p></li>
-	<li><p>Web Servers</p></li>
-	<li><p>Network Devices (Switches; Routers; Firewalls; IDS/IPS)</p></li>
-	<li><p>Data Analysis</p></li>
-	<li><p>OS and Middleware Configuration Compliance</p></li>
-	<li><p>Windows Servers</p></li>
-	<li><p>Linux Servers</p></li>
-	<li><p>Unix Servers</p></li>
-	<li><p>VMware ESXi</p></li>
-	<li><p>Enterprise Workstations</p></li>
-	<li><p>Database Servers (RDBMS)</p></li>
-	<li><p>Web Servers (IIS, Apache)</p></li>
-	<li><p>Network Devices</p></li>
-	<li><p>Cloud Platforms (AWS, Azure, GCP)</p></li>
-	<li><p>Cloud Services/Resources</p></li>
-</ul>
+        <div class="content">
+            <section class="section">
+                <h2>PROFESSIONAL SUMMARY</h2>
+                <p>Results-driven Senior Cybersecurity Engineer with over <b>20</b> years of experience in <b>Information Technology</b>, including <b>15+ years</b> specializing in <b>enterprise cybersecurity</b> compliance, risk assessment, and audit readiness. Expert in aligning cybersecurity strategies with regulatory frameworks such as NIST CSF/RMF, ISO 27001, FFIEC, and NYDFS.</p>
+                
+                <p>Proficient in leveraging advanced GRC and vulnerability assessment tools including ServiceNow GRC, RSA Archer, Qualys, Tenable, and Rapid7 to optimize governance, risk management, and compliance processes. Extensive expertise in cloud security across multi-cloud environments (AWS, Azure, GCP) and integrating secure software development lifecycle (SDLC) practices within CI/CD pipelines.</p>
+                
+                <p>Proven leader of technical initiatives with a strong track record of managing cross-functional teams, overseeing third-party vendor risk, and building collaborative relationships with stakeholders and external auditors. Dedicated to continuous improvement, driving enhancements to security posture, and ensuring compliance with evolving industry standards and regulatory requirements.</p>
+            </section>
 
-<h2>Technical Skills:</h2>
-<ul>
-	<li><p>Cloud Infrastructure (AWS; Azure; GCP)</p></li>
-	<li><p>Host Virtualization (VMWare; AWS EC2; Azure VM)</p></li>
-	<li><p>Containerization (Kubernetes; Docker; Open Shift)</p></li>
-	<li><p>Non-Relational Database Services (MongoDB; Hadoop; Glacier (S3); Snowflake (S3); Hadoop)</p></li>
-	<li><p>Python</p></li>
-	<li><p>JavaScript</p></li>
-	<li><p>T-SQL</p></li>
-	<li><p>Perl</p></li>
-	<li><p>PHP</p></li>
-	<li><p>HTML</p></li>
-	<li><p>JSON, XML, YAML, CSV</p></li>
-	<li><p>Excel + Power Query</p></li>
-	<li><p>Microsoft SQL Server</p></li>
-	<li><p>Oracle Database</p></li>
-	<li><p>MySQL</p></li>
-	<li><p>PostgreSQL</p></li>
-	<li><p>Microsoft IIS</p></li>
-	<li><p>Apache HTTP Server</p></li>
-	<li><p>Apache Tomcat</p></li>
-	<li><p>Splunk</p></li>
-	<li><p>Atlassian Jira & Confluence</p></li>
-	<li><p>GitHub, GitLab</p></li>
-	<li><p>SharePoint Admin</p></li>
-	<li><p>Qualys Admin, VMDR, Policy Compliance, CSAM</p></li>
-</ul>
+            <section class="section">
+                <h2>WORK EXPERIENCE</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">SENIOR CYBERSECURITY ENGINEER</div>
+                            <div class="company">Truist Financial</div>
+                        </div>
+                        <div class="duration">March 2020 – January 2025</div>
+                    </div>
+                    <ul>
+                        <li>Led the enterprise-wide cybersecurity compliance program, ensuring adherence to ISO 27001, FFIEC, NYDFS, and NIST 800–53 controls, enhancing audit readiness by 75%</li>
+                        <li>Executed comprehensive enterprise risk assessments, maintaining dynamic risk registers and collaborating with IT and business stakeholders to develop mitigation strategies</li>
+                        <li>Directed vendor risk management activities, including third-party risk evaluations and compliance audits for critical SaaS and cloud providers</li>
+                        <li>Automated compliance evidence collection processes through advanced Python and PowerShell scripting, reducing manual audit preparation time by 60%</li>
+                        <li>Integrated security into CI/CD pipelines, collaborating closely with DevSecOps teams to implement secure SDLC practices across AWS and Azure environments</li>
+                        <li>Enhanced vulnerability management processes using tools like Qualys, Cloud Guard, and Rapid7, improving threat detection and response capabilities</li>
+                    </ul>
+                </div>
 
-<h2>Standards & Best Practices:</h2>
-<ul>
-	<li><p>CIS Benchmarks</p></li>
-	<li><p>DISA STIG</p></li>
-	<li><p>SCAP</p></li>
-	<li><p>NIST Risk Management Framework</p></li>
-	<li><p>NIST Cyber Security Framework</p></li>
-</ul>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">SENIOR CYBERSECURITY ENGINEER</div>
+                            <div class="company">Capital One Financial</div>
+                        </div>
+                        <div class="duration">January 2012 – March 2020</div>
+                    </div>
+                    <ul>
+                        <li>Supported extensive internal and external audits by coordinating evidence collection, policy mapping, and auditor communications</li>
+                        <li>Embedded automated control checks into CI/CD pipelines, integrating secure SDLC practices to reduce deployment-related compliance gaps by 50%</li>
+                        <li>Established comprehensive compliance and secure-coding training materials for 200+ developers</li>
+                        <li>Conducted comprehensive risk evaluations and compliance audits for all enterprise assets and technologies</li>
+                        <li>Collaborated with multi-disciplinary teams to enhance cloud security solutions across AWS and Azure platforms</li>
+                    </ul>
+                </div>
 
-<h2>Automated Risk & Compliance Solutions:</h2>
-<ul>
-	<li><p>Qualys</p></li>
-	<li><p>Dome9</p></li>
-	<li><p>CloudGuard</p></li>
-	<li><p>Rapid 7</p></li>
-	<li><p>Tenable</p></li>
-</ul>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">CYBERSECURITY ENGINEER</div>
+                            <div class="company">Northrop Grumman</div>
+                        </div>
+                        <div class="duration">September 2008 – January 2012</div>
+                    </div>
+                    <ul>
+                        <li>Led implementation of configuration baselines and SCAP-compliant policies across 50+ defense installations, resulting in 30% reduction in audit findings</li>
+                        <li>Spearheaded vulnerability assessments, patch management, and evidence documentation for mission-critical audits</li>
+                        <li>Appointed to Risk Review Board, collaborating with NGIS and US Army leadership on risk management strategies</li>
+                        <li>Achieved 100% compliance with DoD mandates and zero critical vulnerabilities during external inspections</li>
+                    </ul>
+                </div>
 
-<h2>Security Frameworks Expertise:</h2>
-<ul>
-	<li><p>NIST CSF (Cyber Security Framework)</p></li>
-	<li><p>NIST RMF (Risk Management Framework)</p></li>
-	<li><p>CIS Controls</p></li>
-	<li><p>ISO 27001</p></li>
-	<li><p>FFIEC</p></li>
-</ul>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">DESKTOP SUPPORT TECHNICIAN</div>
+                            <div class="company">Northrop Grumman (Virginia IT Agency)</div>
+                        </div>
+                        <div class="duration">June 2007 - September 2008</div>
+                    </div>
+                    <ul>
+                        <li>Network Services: Workstation connectivity, client-server connectivity, VPN, WLAN, and WWAN support</li>
+                        <li>Software Administration: Active Directory, WSUS Server, McAfee ePolicy Orchestrator, asset management</li>
+                        <li>Hardware Support: HP Laptops, Printers and MFPs, Dell Desktops and Laptops, Networking Equipment</li>
+                    </ul>
+                </div>
 
-<h2>Asset Configuration Management:</h2>
-<ul>
-	<li><p>ServiceNow</p></li>
-	<li><p>HPSM (CMDB)</p></li>
-</ul>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">TECHNOLOGY MANAGER</div>
+                            <div class="company">Yukon Group, Inc.</div>
+                        </div>
+                        <div class="duration">July 2006 – June 2007</div>
+                    </div>
+                    <ul>
+                        <li>Remote system administration, web server administration, network security management</li>
+                        <li>Email administration (MailEnable, iMail), Microsoft Office, IIS, Apache Web Server</li>
+                        <li>Hardware/software support, web design, CBT design, media design, and LMS management</li>
+                    </ul>
+                </div>
+            </section>
 
-<h1>Diverse Cybersecurity Expertise</h1>
-<ul>
-	<li><p>A highly skilled security professional with over 15 years of experience in risk management, regulatory compliance, and technical implementation. Specializes in identifying and mitigating threats, standardizing configuration compliance, and developing actionable incident response plans. Proven track record in large financial corporations, delivering results at scale through technical asset hardening, remediation, and risk assessments.</p></li>
-	<li><p>I provide a well-rounded skill set designed to address the most critical cybersecurity challenges currently facing organizations:</p></li>
-</ul>
+            <section class="section">
+                <h2>SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>SECURITY & COMPLIANCE FRAMEWORKS</h4>
+                        <ul class="skill-list">
+                            <li>NIST CSF/RMF</li>
+                            <li>CIS Controls & Benchmarks</li>
+                            <li>DISA STIG</li>
+                            <li>PCI-DSS, FFIEC, NYDFS</li>
+                            <li>ISO 27001/27017/27018</li>
+                            <li>FedRAMP, HIPAA, GDPR</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>CLOUD PLATFORMS</h4>
+                        <ul class="skill-list">
+                            <li>Amazon Web Services (AWS)</li>
+                            <li>Microsoft Azure</li>
+                            <li>Google Cloud Platform (GCP)</li>
+                            <li>Multi-cloud security</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>GRC & VULNERABILITY TOOLS</h4>
+                        <ul class="skill-list">
+                            <li>ServiceNow GRC</li>
+                            <li>RSA Archer</li>
+                            <li>Qualys</li>
+                            <li>Tenable</li>
+                            <li>Rapid7</li>
+                            <li>Splunk SIEM</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>PROGRAMMING & AUTOMATION</h4>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>PowerShell</li>
+                            <li>Bash</li>
+                            <li>JavaScript</li>
+                            <li>Perl</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>DevSecOps & CI/CD</h4>
+                        <ul class="skill-list">
+                            <li>Secure SDLC practices</li>
+                            <li>Infrastructure as Code (IaC)</li>
+                            <li>Terraform, CloudFormation</li>
+                            <li>Docker, Kubernetes security</li>
+                            <li>GitLab, GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>RISK & AUDIT MANAGEMENT</h4>
+                        <ul class="skill-list">
+                            <li>Enterprise Risk Assessments</li>
+                            <li>Third-Party Risk Evaluations</li>
+                            <li>Control Testing</li>
+                            <li>Evidence Collection</li>
+                            <li>Regulatory Mappings</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-<h2>Risk Management Expertise:</h2>
-<ul>
-	<li><p>I specialize in identifying, evaluating, and mitigating threats before they impact operations. My approach integrates both qualitative and quantitative analysis to guide security decisions with precision.</p></li>
-	<li><p>Expertise: Risk management, threat identification, evaluation, and mitigation.</p></li>
-	<li><p>Approach: Integrates qualitative and quantitative analysis for precise security decisions.</p></li>
-</ul>
+            <section class="section">
+                <h2>EDUCATION & TRAINING</h2>
+                <div class="education-item">
+                    <h4>Bachelor of Science in Computer Science</h4>
+                    <p><strong>ECPI University</strong> | 2004 - 2007</p>
+                </div>
+                
+                <div class="training-item">
+                    <h4>Current Training & Certifications</h4>
+                    <ul>
+                        <li>Amazon Web Services (AWS) Security</li>
+                        <li>Google Cloud Cybersecurity - Active Training</li>
+                        <li>CCZT (Certificate of Competence in Zero Trust) - Active Training</li>
+                    </ul>
+                </div>
+            </section>
 
-<h2>Regulatory Proficiency:</h2>
-<ul>
-	<li><p>I have a working command of key standards and frameworks including:</p></li>
-	<li><p>HIPAA, PCI-DSS, ISO 27001, NIST CSF (including 2.0), and CIS Controls.</p></li>
-	<li><p>Beyond just practical knowledge of these frameworks, I have over 15 years of extensive technical skills and experience required to understand and directly translate and apply them strategically to real-world environments.</p></li>
-	<li><p>Regulatory Expertise: Proficient in HIPAA, PCI-DSS, ISO 27001, NIST CSF (including 2.0), and CIS Controls.</p></li>
-	<li><p>Technical Experience: Over 15 years of experience applying regulatory frameworks in real-world environments.</p></li>
-</ul>
+            <section class="section">
+                <h2>PROJECTS</h2>
+                <ul>
+                    <li><strong>Founder & Tech Lead:</strong> Cyber-CRIT, Cybersecurity Solutions Research (2025-Present)</li>
+                    <li><strong>Founder & Instructor:</strong> Python Working Sessions, Capital One (2018-2020)</li>
+                </ul>
+            </section>
 
-<h2>Technical Acumen:</h2>
-<ul>
-	<li><p>With a strong grasp of system operations, network behavior, and risk-based analysis, I bridge the gap between technology and security. Beyond governance and federal mandates at these high level frameworks, my skills and value have proven most effective at a technical level, standardizing and implementing configuration compliance leveraging standards and best practices, particularly skilled in bringing CIS Benchmarks and DISA STIG controls into real-world application, bringing solutions, assets, resources and services to all operational organizations across massive enterprise environments to compliance, when effectiveness and efficiency are critical.</p></li>
-	<li><p>Technical Expertise: Strong grasp of system operations, network behavior, and risk-based analysis.</p></li>
-	<li><p>Compliance Implementation: Skilled in standardizing and implementing configuration compliance, particularly CIS Benchmarks and DISA STIG controls.</p></li>
-	<li><p>Enterprise-Level Experience: Proven ability to bring solutions and services to compliance across massive enterprise environments.</p></li>
-</ul>
+            <section class="section">
+                <h2>PROFESSIONAL AFFILIATIONS</h2>
+                <ul>
+                    <li>ISACA Professional Member</li>
+                    <li>Center for Internet Security (CIS) Member</li>
+                    <li>Cloud Security Alliance (CSA) - Training for CCZT</li>
+                </ul>
+            </section>
 
-<h2>Audit Readiness:</h2>
-<ul>
-	<li><p>I coordinate and prepare for audits, lead post-assessment remediations, and develop incident response plans that are both actionable and aligned with business continuity. Demonstrated sector-specific insight, effectively spanning financial institutions, and federal and state public sector organizations through security compliance focused initiatives.</p></li>
-	<li><p>Audit Expertise: Coordinates and prepares for audits, leads post-assessment remediations.</p></li>
-	<li><p>Incident Response Planning: Develops actionable incident response plans aligned with business continuity.</p></li>
-	<li><p>Sector-Specific Experience: Demonstrated insight into financial institutions and federal/state public sector organizations through security compliance initiatives.</p></li>
-</ul>
+            <section class="section">
+                <h2>RECENT WORKSHOPS & CONFERENCES</h2>
+                <ul>
+                    <li>NIST Cyber AI Profile Working Session: Securing AI System Components (Aug 26, 2025)</li>
+                    <li>NIST Cyber AI Profile Working Session: Thwarting AI-enabled Cyber Attacks (Sep 2, 2025)</li>
+                    <li>NIST Cyber NCCoE Secure Software Development (DevSecOps) Virtual Event (Aug 27, 2025)</li>
+                </ul>
+            </section>
 
-<h2>Communication:</h2>
-<ul>
-	<li><p>From boardrooms to back-end teams, I translate complex risks into actionable insights. Under the strictest high-impact scrutiny, I've consistently exceeded expectations managing security risk in specialized contexts including information systems across all organizations throughout some of the largest financial industry corporations.</p></li>
-	<li><p>Professional Expertise: Translates complex risks into actionable insights.</p></li>
-	<li><p>Experience: Managed security risk in specialized contexts, including information systems, in large financial corporations.</p></li>
-	<li><p>Proven Track Record: Exceeded expectations under high-impact scrutiny.</p></li>
-</ul>
-
-<h2>Demonstrated Growth and Impact</h2>
-<ul>
-	<li><p>Throughout my career, I’ve taken on progressively advanced roles holding accountability for standardization, assessment, and remediation of technologies throughout high-visibility enterprise environments for large corporations, consistently delivering results in security hardening, compliance implementation & remediation, and risk, compliance & vulnerability reduction at scale.</p></li>
-	<li><p>Career Focus: Standardization, assessment, and remediation of technologies in high-visibility enterprise environments.</p></li>
-	<li><p>Expertise: Security hardening, compliance implementation & remediation, and risk, compliance & vulnerability reduction.</p></li>
-	<li><p>Experience: Proven track record in large corporations, delivering results at scale.</p></li>
-	<li><p>Designed and enforced security controls in alignment with multiple frameworks, actively engaged in the front lines of standardization, executive visibility, and deep technical involvement in general down to granular aspects of secure system planning, compliance remediation, and post-implementation sustainability and operational partnerships essential to maintaining secure configuration of solutions across the enterprise.</p></li>
-	<li><p>Security Expertise: Designed and enforced security controls aligned with multiple frameworks.</p></li>
-	<li><p>Technical Proficiency: Deep technical involvement in secure system planning, compliance remediation, and post-implementation sustainability.</p></li>
-	<li><p>Collaboration and Leadership: Actively engaged in standardization, executive visibility, and operational partnerships.</p></li>
-	<li><p>Technical asset hardening and remediation efforts leadership - Established and maintained effective cross-functional partnerships - Collaborated across IT and business teams to embed secure practices and sustainability. I have extensive experience in making bold operational decisions, in-depth and summative risk assessments of both internal solutions and third-party SaaS providers.</p></li>
-	<li><p>Technical Expertise: Extensive experience in technical asset hardening, remediation, and risk assessments of internal and third-party solutions.</p></li>
-	<li><p>Collaboration and Leadership: Proven ability to establish and maintain cross-functional partnerships, embedding secure practices and sustainability.</p></li>
-	<li><p>Decision-Making: Demonstrated capability in making bold operational decisions and conducting in-depth risk assessments.</p></li>
-</ul>
-
-<h2>WORK ETHIC</h2>
-<ul>
-	<li><p>Personality Traits: Proactive, adaptable, team-oriented, ethical.</p></li>
-	<li><p>Professional Approach: Anticipates risks, stays updated, collaborates, maintains integrity.</p></li>
-	<li><p>Advocacy: Raises awareness and promotes shared responsibility for security.</p></li>
-</ul>
-
-<h1>Summary</h1>
-<p>In a world where breaches can cost millions and reputations hang by a thread, organizations need cybersecurity professionals who go beyond the baseline. I offer the strategic insight, technical depth, and trusted reliability to help lead organizations to meet and improve upon stable and sustainable standards of excellence across the enterprise.</p>
-<p>I provide unwavering dedication to meeting and exceeding expectations of a program. With a fierce loyalty and operational persistence, the integrity and success of a cybersecurity organization's mission are my top priority. Along with my combination of technical competencies required to help make it happen, full dedication to living up to values and goals is exactly what I bring to the table.</p>
-<ul>
-	<li><p>Expertise: Strategic insight, technical depth, and trusted reliability in cybersecurity.</p></li>
-	<li><p>Commitment: Unwavering dedication to meeting and exceeding program expectations with fierce loyalty and operational persistence.</p></li>
-	<li><p>Goal: Prioritize the integrity and success of a cybersecurity organization’s mission.</p></li>
-</ul>
-
-<h1>Experience</h1>
-<p>Experienced Senior Cyber Security Engineer with expertise in cloud security, DevSecOps, and compliance automation. Skilled in vulnerability assessment, risk management, and technical mentorship.</p>
-<h2>Senior Cyber Security Engineer</h2>
-	<p>Role (2021-2025): Vuln Mgmt, Risk & Compliance</p>
-	<p>Role (2020-2021): Cloud Security Engineer</p>
-	<p>Company: Truist Financial</p>
-	<p>Employed: March 2020 - January 2025</p>
-<h3>Responsibilities:</h3>
-<p>Led technical asset hardening and remediation efforts, establishing and maintaining effective cross-functional partnerships. Collaborated with IT and business teams to embed secure practices and sustainability. Experienced in making bold operational decisions and conducting in-depth risk assessments of internal solutions and third-party SaaS providers.</p>
-	<p>Risk, compliance, automation, and DevSecOps solutions for corporate cybersecurity. Vulnerability, risk, and standards compliance assessments, training, and advocacy. Technical support, guidance, and initiative leadership.</p>
-<ul>
-	<li><p>Cloud Security</p></li>
-	<li><p>Cloud DevSecOps</p></li>
-	<li><p>Cloud Security Automation, Deployment & Management</p></li>
-	<li><p>Risk & Compliance Automation & DevSecOps</p></li>
-	<li><p>Collaborative Baseline Tailoring Leadership</p></li>
-	<li><p>Corporate Cybersecurity Configuration Baseline Standards</p></li>
-	<li><p>Compliance Automation</p></li>
-	<li><p>Compliance Assessment, Reporting & Remediation</p></li>
-	<li><p>DevSecOps (BAU Solutions)</p></li>
-	<li><p>Technical Solution Development</p></li>
-	<li><p>Vulnerability Assessment, Risk Assessment</p></li>
-	<li><p>Risk Awareness, Training & Advocacy</p></li>
-	<li><p>Standards Compliance Awareness, Training & Advocacy</p></li>
-	<li><p>Technical Mentorship</p></li>
-	<li><p>Technical Support, Guidance & Initiative Leadership</p></li>
-	<li><p>Automated Solutions Scripting: Risk & Compliance Assessment Policies & Controls, Proprietary Evaluations, Streamlined Data Collection, Aggregation, Implementation, and Management</p></li>
-</ul>
-
-<h2>Cyber Security Engineer (Vulnerability, Risk & Compliance)</h2>
-	<p>Company: Capital One Financial</p>
-	<p>Employed: January 2012 - March 2020</p>
-	<p>Responsibilities:</p>
-<ul>
-	<li><p>Cloud security, DevSecOps, and compliance automation are key areas of focus. This includes risk assessment, training, and technical support.</p></li>
-	<li><p>Cloud Security</p></li>
-	<li><p>Cloud DevSecOps</p></li>
-	<li><p>Cloud Security Automation</p></li>
-	<li><p>Deployment & Management</p></li>
-	<li><p>Risk & Compliance Automation & DevSecOps</p></li>
-	<li><p>Collaborative Baseline Tailoring Leadership</p></li>
-	<li><p>Corporate Cybersecurity Configuration Baseline Standards</p></li>
-	<li><p>Compliance Automation</p></li>
-	<li><p>Compliance Assessment, Reporting, & Remediation</p></li>
-	<li><p>DevSecOps (BAU Solutions)</p></li>
-	<li><p>Technical Solution Development</p></li>
-	<li><p>Vulnerability Assessment & Risk Assessment</p></li>
-	<li><p>Risk Awareness, Training, & Advocacy</p></li>
-	<li><p>Standards Compliance Awareness, Training, & Advocacy</p></li>
-	<li><p>Technical Mentorship</p></li>
-	<li><p>Technical Support, Guidance, & Initiative Leadership</p></li>
-	<li><p>Automated Solutions Scripting: Risk & Compliance Assessment Policies & Controls</p></li>
-	<li><p>Proprietary Evaluations</p></li>
-	<li><p>Streamlined Data Collection, Aggregation, Implementation, and Management</p></li>
-</ul>
-
-<h2>Security Engineer | Northrop Grumman | Sep 2008 - Jan 2012</h2>
-<p>Company: Northrop Grumman Information Systems</p>
-<p>Employed: 2008 – 2012</p>
-<h3>Responsibilities:</h3>
-<ul>
-	<li><p>Managed Linux and Windows Server environments for DoD (public sector) military data streamlining projects, implementing DISA STIG compliance and secure configuration baselines.</p></li>
-	<li><p>In this role, my primary responsibilities focused on NIST frameworks, DISA STIG, and SCAP. It also covers vulnerability assessment, monitoring, and enterprise risk management.</p></li>
-	<li><p>Day to day operations relied heavily on my strong technical expertise in system operations, network behavior, and risk-based analysis. Critical activities and highest visibility operations leveraged my competencies in implementing configuration compliance, particularly DISA STIG controls, specifically supporting mission-critical military information systems.</p></li>
-	<li><p>Secured and managed Linux and Windows Server environments.</p></li>
-	<li><p>Supported DoD projects.</p></li>
-	<li><p>Implemented DISA STIG compliance.</p></li>
-	<li><p>Implemented patch management.</p></li>
-	<li><p>Implemented secure configuration baselines for deployment to state-side military installations all over the US.</p></li>
-</ul>
-
-<h1>Education</h1>
-<ul>
-	<li><p>BACHELOR’S DEGREE | Information Technology | ECPI University (2004-2007)</p></li>
-</ul>
-
-<h1>Certifications & Training</h1>
-<ul>
-	<li><p>CompTIA Security+</p></li>
-	<li><p>CompTIA Network+</p></li>
-	<li><p>NIST 800-53: Assessing Security and Privacy Controls in Information Systems and Organizations (CoC)</p></li>
-	<li><p>CCSP (Certified Cloud Security Professional) — multi-cloud security certification training</p></li>
-	<li><p>Amazon Web Services (AWS) Essential Training</p></li>
-	<li><p>Microsoft Security, Compliance, and Identity Fundamentals (SC-900) — Intro to Azure security and identity training</p></li>
-	<li><p>Cloud Security Alliance CCSK — Foundational cloud security knowledge applicable to AWS/Azure</p></li>
-	<li><p>Microsoft Certified Professional (MCP) - Windows, MS SQL Server</p></li>
-	<li><p>Microsoft Certified Technology Specialist (MCTS)</p></li>
-</ul>
-
-
-</div>
-<footer>
-    <p>&copy; 2025 Jason R Hall. All Rights Reserved.</p>
-</footer>
+            <section class="section">
+                <h2>HONORS AND AWARDS</h2>
+                <h3>NIST FRAMEWORKS & STANDARDS</h3>
+                <div class="awards-grid">
+                    <div class="award-item">
+                        <strong>NIST SP 800-53</strong><br>
+                        Security & Privacy Controls<br>
+                        <em>September 2, 2025</em>
+                    </div>
+                    <div class="award-item">
+                        <strong>NIST SP 800-53A</strong><br>
+                        Assessing Security & Privacy Controls<br>
+                        <em>July 23, 2025</em>
+                    </div>
+                    <div class="award-item">
+                        <strong>NIST SP 800-53B</strong><br>
+                        Control Baselines<br>
+                        <em>September 2, 2025</em>
+                    </div>
+                    <div class="award-item">
+                        <strong>NIST RMF</strong><br>
+                        Risk Management Framework<br>
+                        <em>July 23, 2025</em>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
